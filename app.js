@@ -24,7 +24,7 @@ $(document).ready(function () {
             return false;
         }
         Display();
-        outfile = `mixquery_2025sp_abtest_top_${name}.csv`;
+        outfile = `mixquery_2025sp_abtest_stems_${name}.csv`;
         init();
 
     }

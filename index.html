@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Musical Instrument Sound Similarity Test 2023</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="module" src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons</title>
+    <style>
+        /* スタイルの追加 */
+        .radio-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #Display2 label {
+            display: inline-block;
+            width: 2em;
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        .radio-container span {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 注意書きなど -->
+    <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
+        <p>
+        <h1>Musical Instrument Sound Similarity Test</h1>
+
+        Thank you for your cooperation in my experiment.
+        This experiment is musical instrument sound similarity test.
+        I will explain the experimental procedure.
+
+        <h2>実験手順</h2>
+        <ol>
+            <li>名前を入力し、楽器演奏に関するアンケートに回答し、<b>依頼されたセット番号</b>を選んで下さい。<br>
+            <li>"Start Experiment"を押して下さい。</li>
+            <li>初めに一番上にある楽器音を聴いて下さい。これをSound Xとします。<br>
+                続けて、下2つの楽器音A,Bも聴いてください<br>
+                <b>楽器音は全て必ず最後まで聞いてください</b>
+            </li>
+            <li>そして、その下に列挙された3つの要素（音色、リズム、メロディ）においてそれぞれ、<b>XはAとBのどちらに近いか</b>を、<b>Xの位置を選択することで</b>回答してください。<br>
+                例えば、<b>A</b>に近いと<b>強く</b>感じる場合は、<b>一番左</b>のボタンを選択してください。<b>B</b>に近いと<b>少し</b>感じる場合は<b>右から2番目</b>のボタンを選択してください。<br>
+                <b>再生した楽器音がその要素を持たない（例: ドラム音にメロディがない）場合は、選択を真ん中から動かす必要はありません。</b><br>
+                また、A,Bどちらも同じくらいXと似ている/似ていない場合も真ん中を選択することができますが、<b>3つの要素全てにおいて真ん中という回答はできません</b>。<br>
+
+            </li>
+            <li>選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
+            <li>評価実験を全て終えたら"finish"ボタンを押して結果をダウンロードして下さい。<br>
+                結果はSlackか下記のメールアドレスに送信して下さい。</li>
+            <li>Emailアドレス: hashizume.yuuka@g.sp.m.is.nagoya-u.ac.jp
+            </li>
+        </ol>
+
+        <h2>注意</h2>
+        <ul>
+            <li>この実験は1セットあたり凡そ15分ほど要します</li>
+            <li>実験中はページの再読み込みは行わないで下さい。</li>
+            <li>スマートフォンでは結果をダウンロードできない場合があるためPCを使用して下さい。</li>
+            <li>ヘッドホンやイヤホンを着用した状態で行って下さい。</li>
+        </ul>
+        </p>
+    </div>
+
+    <div id="Display1">
+        <p> Your name: <br>
+            <input type="text" id="name" value="">
+        </p>
+        <button id="start">Start Experiment</button>
+    </div>
+
+
+    <div id="Display2" style="display:none;">
+        <!-- 注意書きなど <body onload="init()"> -->
+        <p id="page"></p>
+        <p>"以下の音源を聴き・・・"</p>
+        <p>
+        <p id="play_retrieved"></p>
+        <div class="test_container">
+            <div id="play_query_cont0">
+                <p id="inst_display0"></p>
+                <p id="play_query0_a"></p>
+                <p id="play_query0_b"></p>
+            </div>
+            <div id="radio-container0">
+                <div>
+                    <label for="radia">A</label>
+                    <input type="radio" class="radio_btn0" id="radio_a0" score="a">
+                    <label for="radio_b">B</label>
+                    <input type="radio" class="radio_btn0" id="radio_b0" score="b">
+                </div>
+            </div>
+            <div id="play_query_cont1">
+                <p id="inst_display1"></p>
+                <p id="play_query1_a"></p>
+                <p id="play_query1_b"></p>
+            </div>
+            <div id="radio-container1">
+                <div>
+                    <label for="radia">A</label>
+                    <input type="radio" class="radio_btn1" id="radio_a1" score="a">
+                    <label for="radio_b">B</label>
+                    <input type="radio" class="radio_btn1" id="radio_b1" score="b">
+                </div>
+            </div>
+            <div id="play_query_cont2">
+                <p id="inst_display2"></p>
+                <p id="play_query2_a"></p>
+                <p id="play_query2_b"></p>
+            </div>
+            <div id="radio-container2">
+                <div>
+                    <label for="radia">A</label>
+                    <input type="radio" class="radio_btn2" id="radio_a2" score="a">
+                    <label for="radio_b">B</label>
+                    <input type="radio" class="radio_btn2" id="radio_b2" score="b">
+                </div>
+            </div>
+        </div>
+        </p>
+        <button id="prev">prev</button>
+        <button id="next">next</button>
+        <button id="finish">finish</button>
+        </p>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+{
+    "0": {
+        "query0": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test0/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test0/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test0/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test0/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test0/retrieved.mp3"
+        }
+    },
+    "1": {
+        "query0": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test1/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test1/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test1/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test1/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test1/retrieved.mp3"
+        }
+    },
+    "2": {
+        "query0": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test2/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test2/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test2/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test2/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test2/retrieved.mp3"
+        }
+    }
+}

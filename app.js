@@ -80,7 +80,7 @@ $(document).ready(function () {
             $("#radio-container2").css("display", "none");
         };
 
-        $(`#play_retrieved`).html(`song:<br><audio src="${set_dict[test_no]["retrieved"]}" controls preload="auto"></audio>`);
+        $(`#play_retrieved`).html(`<b>Song</b>:<br><audio src="${set_dict[test_no]["retrieved"]}" controls preload="auto"></audio>`);
 
     }
 

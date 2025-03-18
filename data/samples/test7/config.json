@@ -1,0 +1,20 @@
+{
+    "queries": {
+        "query0": {
+            "query_idx": 0,
+            "inst": "bass",
+            "track_id": "IN26",
+            "seg_idx": "7"
+        },
+        "query1": {
+            "query_idx": 1,
+            "inst": "other",
+            "track_id": "IN51",
+            "seg_idx": "7"
+        }
+    },
+    "retrieved": {
+        "track_id": "REF208",
+        "seg_idx": 1
+    }
+}

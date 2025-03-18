@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Musical Instrument Sound Similarity Test 2023</title>
+    <title>ABX test 2025 sp Stem</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="module" src="app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,25 +34,25 @@
     <!-- 注意書きなど -->
     <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
         <p>
-        <h1>Musical Instrument Sound Similarity Test</h1>
+        <h1>楽曲類似度聴取ABテスト typeB</h1>
 
-        Thank you for your cooperation in my experiment.
-        This experiment is musical instrument sound similarity test.
-        I will explain the experimental procedure.
+        実験にご参加いただきありがとうございます。
+        手順をよく読み、実験を開始してください。
 
         <h2>実験手順</h2>
         <ol>
-            <li>名前を入力し、楽器演奏に関するアンケートに回答し、<b>依頼されたセット番号</b>を選んで下さい。<br>
+            <li>名前を入力してください。<br>
             <li>"Start Experiment"を押して下さい。</li>
-            <li>初めに一番上にある楽器音を聴いて下さい。これをSound Xとします。<br>
-                続けて、下2つの楽器音A,Bも聴いてください<br>
-                <b>楽器音は全て必ず最後まで聞いてください</b>
+            <li>Parts: の下に表示される楽器音またはボーカルを上から順に<b>最後まで</b>聞いてください。<br>
             </li>
-            <li>そして、その下に列挙された3つの要素（音色、リズム、メロディ）においてそれぞれ、<b>XはAとBのどちらに近いか</b>を、<b>Xの位置を選択することで</b>回答してください。<br>
-                例えば、<b>A</b>に近いと<b>強く</b>感じる場合は、<b>一番左</b>のボタンを選択してください。<b>B</b>に近いと<b>少し</b>感じる場合は<b>右から2番目</b>のボタンを選択してください。<br>
-                <b>再生した楽器音がその要素を持たない（例: ドラム音にメロディがない）場合は、選択を真ん中から動かす必要はありません。</b><br>
-                また、A,Bどちらも同じくらいXと似ている/似ていない場合も真ん中を選択することができますが、<b>3つの要素全てにおいて真ん中という回答はできません</b>。<br>
-
+            <li>
+                次に、Song: の下に表示される2つの楽曲AとBを<b>最後まで</b>聞いてください。
+            </li>
+            <li>
+                Parts:で聞いた複数の楽器音/ボーカルに対し、楽曲に含まれる楽器音/ボーカルが、より似ていると思う方をSong: のAまたはBから選択してください。<br>
+                Parts:で提示されなかった楽器音に関しては、考慮する必要はありません。<br>
+                例）Parts: でdrumsとbassが提示された場合は、Song AのdrumsとSong BのdrumsどちらがよりParts: で示されたdrumsに似ているか、<br>
+                Song AのbassとSong BのbassどちらがよりParts: で示されたbassに似ているか、を考慮し、総合的により似ている方を選択してください。
             </li>
             <li>選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
             <li>評価実験を全て終えたら"finish"ボタンを押して結果をダウンロードして下さい。<br>
@@ -82,9 +82,10 @@
     <div id="Display2" style="display:none;">
         <!-- 注意書きなど <body onload="init()"> -->
         <p id="page"></p>
-        <p>"以下の音源を聴き・・・"</p>
+        <p>以下の音源を聴き、上記の実験手順にしたがって選択してください。</p>
         <p>
         <p id="play_retrieved"></p>
+        <p><b>Parts: </b></p>
         <div class="test_container">
             <div id="play_query_cont0">
                 <p id="inst_display0"></p>

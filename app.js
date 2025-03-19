@@ -127,6 +127,10 @@ $(document).ready(function () {
 
     function prev() {
         n--;
+        for (var i = 0; i < 3; i++) {
+            var choice_prev = result[n][i][3];
+            $(`#radio_${choice_prev}${i}`).prop("checked", true);
+        }
         delete result[n];
         setAudio();
         setButton();

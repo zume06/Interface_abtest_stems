@@ -55,13 +55,36 @@ $(document).ready(function () {
         $("#finish").prop("disabled", true);
     }
 
+    function setButtonPrev() {
+        $(".radio_btn0").prop("checked", false);
+        $(".radio_btn1").prop("checked", false);
+        $(".radio_btn2").prop("checked", false);
+        for (var i = 0; i < 3; i++) {
+            if (result[n][i] !== undefined) {
+                var choice_prev = result[n][i][3];
+                $(`#radio_${choice_prev}${i}`).prop("checked", true);
+            }
+        }
+        radio_checked0 = true;
+        radio_checked1 = true;
+        radio_checked2 = true;
+        delete result[n];
+        if (n == 0) {
+            $("#prev").prop("disabled", true);
+        }
+        else {
+            $("#prev").prop("disabled", false);
+        }
+        $("#next").prop("disabled", false);
+        $("#finish").prop("disabled", true);
+
+    }
+
     function evalRecord() {
-        console.log("choices.length", choices.length);
         var test_no_ = set_no_array[n];
         result[n] = []
         for (var i = 0; i < choices.length; i++) {
             result[n].push([test_no_, file_paths[i]["a"], file_paths[i]["b"], choices[i], truths[i]])
-            console.log("result", result);
         }
     }
 
@@ -127,13 +150,8 @@ $(document).ready(function () {
 
     function prev() {
         n--;
-        for (var i = 0; i < 3; i++) {
-            var choice_prev = result[n][i][3];
-            $(`#radio_${choice_prev}${i}`).prop("checked", true);
-        }
-        delete result[n];
         setAudio();
-        setButton();
+        setButtonPrev();
     }
 
     function finish() {
@@ -170,8 +188,7 @@ $(document).ready(function () {
     let num_query;
 
     $.getJSON("./data/file_list.json", function (d) {
-        set_dict = d
-        console.log(set_dict);
+        set_dict = d;
         for (let i = 0; i < Object.keys(set_dict).length; i++) {
             set_no_array.push(i);
         }
@@ -185,16 +202,15 @@ $(document).ready(function () {
     });
 
     $("#next").on("click", function () {
-        console.log(choices);
-        next()
+        next();
     });
 
     $("#prev").on("click", function () {
-        prev()
+        prev();
     });
 
     $("#finish").on("click", function () {
-        finish()
+        finish();
     });
 
     $(".radio_btn0").on("click", function () {
@@ -202,7 +218,6 @@ $(document).ready(function () {
         $(".radio_btn0").not(this).prop("checked", false);
         ansCheck();
         choice0 = $(this).attr("score");
-        console.log("choice0", choice0);
         if (num_query > 2) {
             choices = [choice0, choice1, choice2];
         } else {
@@ -214,7 +229,6 @@ $(document).ready(function () {
         $(".radio_btn1").not(this).prop("checked", false);
         ansCheck();
         choice1 = $(this).attr("score");
-        console.log("choice1", choice1);
         if (num_query > 2) {
             choices = [choice0, choice1, choice2];
         } else {

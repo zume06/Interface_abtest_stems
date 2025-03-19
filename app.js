@@ -65,6 +65,7 @@ $(document).ready(function () {
     }
 
     function setAudio() {
+        $("#page").text(`${n + 1}/${set_no_array.length}`);
         var test_no = set_no_array[n]
         num_query = set_dict[test_no]["num_query"];
         file_paths = [];
@@ -78,6 +79,8 @@ $(document).ready(function () {
         }
         if (num_query < 3) {
             $("#radio-container2").css("display", "none");
+        } else {
+            $("#radio-container2").css("display", "block");
         };
 
         $(`#play_retrieved`).html(`<b>Song</b>:<br><audio src="${set_dict[test_no]["retrieved"]}" controls preload="auto"></audio>`);

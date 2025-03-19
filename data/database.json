@@ -1,11 +1,11 @@
 {
     "0": {
         "query0": {
-            "inst": "vocals",
+            "inst": "drums",
             "audio_path": "./data/samples/test0/queries/query0.mp3"
         },
         "query_comp0": {
-            "inst": "vocals",
+            "inst": "drums",
             "audio_path": "./data/samples/test0/queries_comp/query0_comp.mp3"
         },
         "query1": {
@@ -23,19 +23,19 @@
     },
     "1": {
         "query0": {
-            "inst": "vocals",
+            "inst": "drums",
             "audio_path": "./data/samples/test1/queries/query0.mp3"
         },
         "query_comp0": {
-            "inst": "vocals",
+            "inst": "drums",
             "audio_path": "./data/samples/test1/queries_comp/query0_comp.mp3"
         },
         "query1": {
-            "inst": "vocals",
+            "inst": "bass",
             "audio_path": "./data/samples/test1/queries/query1.mp3"
         },
         "query_comp1": {
-            "inst": "vocals",
+            "inst": "bass",
             "audio_path": "./data/samples/test1/queries_comp/query1_comp.mp3"
         },
         "num_query": 2,
@@ -53,16 +53,170 @@
             "audio_path": "./data/samples/test2/queries_comp/query0_comp.mp3"
         },
         "query1": {
-            "inst": "vocals",
+            "inst": "other",
             "audio_path": "./data/samples/test2/queries/query1.mp3"
         },
         "query_comp1": {
-            "inst": "vocals",
+            "inst": "other",
             "audio_path": "./data/samples/test2/queries_comp/query1_comp.mp3"
         },
         "num_query": 2,
         "retrieved": {
             "audio_path": "./data/samples/test2/retrieved.mp3"
+        }
+    },
+    "3": {
+        "query0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test3/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test3/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test3/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test3/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test3/retrieved.mp3"
+        }
+    },
+    "4": {
+        "query0": {
+            "inst": "drums",
+            "audio_path": "./data/samples/test4/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "drums",
+            "audio_path": "./data/samples/test4/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test4/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test4/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test4/retrieved.mp3"
+        }
+    },
+    "5": {
+        "query0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test5/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test5/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test5/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test5/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test5/retrieved.mp3"
+        }
+    },
+    "6": {
+        "query0": {
+            "inst": "drums",
+            "audio_path": "./data/samples/test6/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "drums",
+            "audio_path": "./data/samples/test6/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test6/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test6/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test6/retrieved.mp3"
+        }
+    },
+    "7": {
+        "query0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test7/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test7/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test7/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test7/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test7/retrieved.mp3"
+        }
+    },
+    "8": {
+        "query0": {
+            "inst": "drums",
+            "audio_path": "./data/samples/test8/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "drums",
+            "audio_path": "./data/samples/test8/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test8/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "vocals",
+            "audio_path": "./data/samples/test8/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test8/retrieved.mp3"
+        }
+    },
+    "9": {
+        "query0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test9/queries/query0.mp3"
+        },
+        "query_comp0": {
+            "inst": "bass",
+            "audio_path": "./data/samples/test9/queries_comp/query0_comp.mp3"
+        },
+        "query1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test9/queries/query1.mp3"
+        },
+        "query_comp1": {
+            "inst": "other",
+            "audio_path": "./data/samples/test9/queries_comp/query1_comp.mp3"
+        },
+        "num_query": 2,
+        "retrieved": {
+            "audio_path": "./data/samples/test9/retrieved.mp3"
         }
     }
 }

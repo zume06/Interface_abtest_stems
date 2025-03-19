@@ -58,8 +58,9 @@ $(document).ready(function () {
     function evalRecord() {
         console.log("choices.length", choices.length);
         var test_no_ = set_no_array[n];
+        result[n] = []
         for (var i = 0; i < choices.length; i++) {
-            result.push([test_no_, file_paths[i]["a"], file_paths[i]["b"], choices[i], truths[i]])
+            result[n].push([test_no_, file_paths[i]["a"], file_paths[i]["b"], choices[i], truths[i]])
             console.log("result", result);
         }
     }
@@ -90,9 +91,13 @@ $(document).ready(function () {
     function exportCSV() {
         var csvData = "";
         csvData += "test_id,path_a,path_b,choice,true\r\n";
-        for (var i = 0; i < result.length; i++) {
-            csvData += `${result[i][0]},${result[i][1]},${result[i][2]},${result[i][3]},${result[i][4]}\r\n`;
-        }
+        Object.keys(result).forEach(key => {
+            var result_lst = result[key];
+            for (var i = 0; i < result_lst.length; i++) {
+                csvData += `${result_lst[i][0]},${result_lst[i][1]},${result_lst[i][2]},${result_lst[i][3]},${result_lst[i][4]}\r\n`;
+            }
+        });
+
         const link = document.createElement("a");
         document.body.appendChild(link);
         link.style = "display:none";
@@ -122,6 +127,7 @@ $(document).ready(function () {
 
     function prev() {
         n--;
+        delete result[n];
         setAudio();
         setButton();
     }
@@ -145,7 +151,7 @@ $(document).ready(function () {
 
     let set_dict;
     let n = 0;
-    let result = [];
+    let result = {};
     let choices;
     let set_no_array = [];
     let outfile;
